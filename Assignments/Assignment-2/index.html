@@ -1,15 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flowers Website</title>
-    <style></style>
-</head>
-<body>
-    <h1>Flowers</h1>
-    <p></p>
-    <img/>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BlossomHaven</title>
+		<link rel="stylesheet" href="styles.css" />
+		<style>
+			h1 {
+				color: rgb(230, 29, 96);
+				font-family: cursive;
+				text-align: center;
+				font-size: 50px;
+			}
+			p {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				line-height: 32px;
+				font-size: 18px;
+				text-align: left;
+                color: rgb(76, 75, 75);
+			}
+			.hero {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				gap: 20px;
+				padding: 20px 40px;
+			}
+			.flowers {
+				padding: 20px 40px;
+			}
+			.flower-cont {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				padding: 20px 0;
+				gap: 40px;
+			}
+			img {
+				border-radius: 16px;
+			}
+			.img-div {
+				width: 45%;
+			}
+			.img-div img {
+				width: 100%;
+				height: 400px;
+				border: none;
+			}
+			.hero-text {
+				width: 50%;
+			}
+			.flower-img {
+				width: 100%;
+				height: 350px;
+			}
+			.each-flower {
+				border: 1px solid rgb(100, 100, 100);
+				padding: 10px;
+				border-radius: 20px;
+			}
+			.each-flower p {
+				line-height: 28px;
+				padding: 10px;
+				font-size: 16px;
+			}
+            .flowers h3{
+                text-align: center;
+                font-size: 40px;
+                font-family: cursive;
+                color: rgb(230, 29, 96);
+            }
+		</style>
+	</head>
+	<body>
+		<h1>BlossomHaven</h1>
+		<div class="hero">
+			<div class="hero-text">
+				<p class="par1">
+					Welcome to BlossomHaven, your ultimate destination for all things
+					flowers! Immerse yourself in the beauty and elegance of nature's
+					most enchanting creations.
+				</p>
+				<p>
+					At BlossomHaven, we have a profound love for flowers. Our passion
+					drives us to share the joy and wonder that flowers bring into our
+					lives. Whether you're a seasoned florist or just someone who
+					appreciates the simple beauty of blooms, you've come to the right
+					place. Explore the world of flowers with us, and let their
+					vibrant colors and delicate fragrances brighten your day!
+				</p>
+			</div>
+
+			<div class="img-div">
+				<img src="../Assignment-2/hero-img.jpg" alt="image of a flower" />
+			</div>
+		</div>
+
+		<div class="flowers">
+			<h3>Our Flowers</h3>
+			<div class="flower-cont">
+				<div class="each-flower">
+					<img src="../Assignment-2/flower1.jpg" class="flower-img" />
+					<p>
+						Lilium: With their graceful petals and captivating fragrance,
+						lilies are a symbol of purity and renewal. Learn about the
+						different varieties of lilies and their cultural significance.
+					</p>
+				</div>
+				<div class="each-flower">
+					<img src="../Assignment-2/flower2.jpg" class="flower-img" />
+					<p>
+						Rosa: Known as the symbol of love, the rose comes in a variety
+						of colors, each carrying its own meaning. Explore the language
+						of flowers through the enchanting world of roses.
+					</p>
+				</div>
+				<div class="each-flower">
+					<img src="../Assignment-2/flower3.jpg" class="flower-img" />
+					<p>
+						Tulipa: Tulips are heralds of spring, bringing vibrant colors
+						to gardens and bouquets alike. Discover the diverse range of
+						tulip varieties and the rich history behind this beloved
+						flower.
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
