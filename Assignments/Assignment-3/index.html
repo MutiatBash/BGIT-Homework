@@ -3,18 +3,81 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Home</title>
+		<link rel="stylesheet" href="../Assignment-3/styles/home.css" />
+		<title>Culinary Masters</title>
 	</head>
 	<body>
-		<header>
-			<nav>
+		<header class="header">
+			<div class="logo">
+				<h4>Culinary Masters</h4>
+			</div>
+			<nav class="main-nav">
 				<ul>
-					<li><a>Home</a></li>
-					<li><a>About us</a></li>
-					<li><a>Recipes</a></li>
+					<li><a href="index.html" class="active">Home</a></li>
+
+					<li><a href="../Assignment-3/pages/about.html">About Us</a></li>
+					<li>
+						<a href="../Assignment-3/pages/recipes/recipes.html"
+							>Recipes</a
+						>
+					</li>
 				</ul>
 			</nav>
 		</header>
-		<main></main>
+
+		<section id="hero" class="hero-section">
+			<div class="hero-text">
+				<h1>
+					Welcome to <span class="culinary-text">Culinary Masters</span>
+				</h1>
+				<p>
+					Explore our collection of mouth-watering recipes that cater to
+					every palate. We are your go-to destination for delicious and
+					diverse recipes! Whether you're a seasoned chef or a cooking
+					enthusiast, you're in for a treat. Explore our collection of
+					mouth-watering recipes that cater to every palate.
+				</p>
+			</div>
+			<div class="hero-img">
+				<img
+					src="../Assignment-3/images/waffle-img.jpg"
+					alt="Delicious Food"
+					class="hero-image"
+				/>
+			</div>
+		</section>
+
+		<section id="featured-recipe" class="featured-recipe-section">
+			<h2 class="section-title">Featured Recipe</h2>
+			<div class="recipe-deet">
+				<div class="hero-img">
+					<img
+						src="../Assignment-3/images/featured-recipe.jpg"
+						alt="Delicious Food"
+						class="hero-image"
+					/>
+				</div>
+				<div>
+					<h3>Chicken Balls</h3>
+					<p></p>
+					<button>View Recipe</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="contact-section">
+			<h2 class="section-title">Contact Us</h2>
+			<p>
+				Have questions about a recipe or want to share your cooking
+				experiences? Contact our friendly team at
+				<a href="mailto:info@culinarymasters.com"
+					>info@culinarymasters.com</a
+				>.
+			</p>
+		</section>
+
+		<footer class="footer">
+			<p>&copy; 2023 Culinary Masters. All rights reserved.</p>
+		</footer>
 	</body>
 </html>
