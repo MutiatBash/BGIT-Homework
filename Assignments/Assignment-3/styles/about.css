@@ -1,15 +1,20 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: rgb(76, 75, 75);
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	color: rgb(76, 75, 75);
 }
-
+.about-sect {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}
 .header {
 	display: flex;
 	flex-direction: row;
@@ -17,12 +22,12 @@ body {
 	align-items: center;
 	background-color: white;
 	color: #2a2a2a;
-	padding: 20px 60px;
+	padding: 30px 60px;
 	position: sticky;
 	top: 0;
-    right:0;
-    left:0;
-    box-shadow: 1px 2px 15px rgba(198, 198, 198, 0.191);
+	right: 0;
+	left: 0;
+	box-shadow: 1px 2px 15px rgba(198, 198, 198, 0.191);
 }
 
 .main-nav ul {
@@ -32,6 +37,12 @@ body {
 	align-items: center;
 	gap: 24px;
 	color: #2a2a2a;
+}
+
+.header .logo {
+	font-family: fantasy;
+	color: coral;
+	font-weight: 600;
 }
 
 .main-nav ul li a {
@@ -44,75 +55,143 @@ body {
 }
 
 .about-us-section {
-  text-align: center;
-  padding: 50px;
-  background-color: #f8f8f8;
+	text-align: center;
+	padding: 50px;
 }
 
 .section-title {
-  color: rgb(230, 29, 96);
-  font-size: 30px;
+	color: coral;
+	font-size: 30px;
 }
 
 .about-us-section p {
-  margin-top: 20px;
-  font-size: 18px;
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+/* CHEF STYLING */
+.our-chefs-section {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	text-align: center;
+	padding: 50px 30px;
+}
+
+.chef-profile {
+	margin-bottom: 40px;
+}
+
+.chef-sect {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+	padding: 30px;
+}
+.chef-profile p {
+	color: rgb(76, 75, 75);
+	line-height: 1.6;
+}
+
+.chef-profile p.role {
+	font-family: fantasy;
+	font-weight: 800;
+	color: coral;
+}
+.chef-profile {
+	border: none;
+	border-radius: 16px;
+}
+.chef-profile img {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+}
+
+.chef-profile h3 {
+	color: coral;
+	font-size: 24px;
 }
 
 .site-footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: rgb(230, 29, 96);
-  color: white;
+	text-align: center;
+	padding: 20px 0;
+	background-color: coral;
+	color: white;
 }
 
 /* Responsive Styling */
 @media only screen and (max-width: 768px) {
-  .main-nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
+	.main-nav ul li {
+		display: block;
+		margin-bottom: 10px;
+	}
 
-  .main-nav a {
-    font-size: 16px;
-  }
+	.main-nav a {
+		font-size: 16px;
+	}
 
-  .about-us-section {
-    padding: 30px;
-  }
+	.about-us-section {
+		padding: 30px;
+	}
 
-  .section-title {
-    font-size: 28px;
-  }
+	.section-title {
+		font-size: 28px;
+	}
 
-  .about-us-section p {
-    font-size: 16px;
-  }
+	.about-us-section p {
+		font-size: 16px;
+	}
+	.chef-profile img {
+		width: 120px;
+		height: 120px;
+	}
+
+	.chef-profile h3 {
+		font-size: 20px;
+	}
+
+	.chef-profile p {
+		font-size: 16px;
+	}
 }
 
 @media only screen and (max-width: 480px) {
-  .main-nav {
-    text-align: center;
-  }
+	.main-nav {
+		text-align: center;
+	}
 
-  .main-nav ul {
-    padding-top: 10px;
-  }
+	.main-nav ul {
+		padding-top: 10px;
+	}
 
-  .main-nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
+	.main-nav ul li {
+		display: block;
+		margin-bottom: 10px;
+	}
 
-  .about-us-section {
-    padding: 20px;
-  }
+	.about-us-section {
+		padding: 20px;
+	}
 
-  .section-title {
-    font-size: 24px;
-  }
+	.section-title {
+		font-size: 24px;
+	}
 
-  .about-us-section p {
-    font-size: 14px;
-  }
+	.about-us-section p {
+		font-size: 14px;
+	}
+	.chef-profile img {
+		width: 100px;
+		height: 100px;
+	}
+
+	.chef-profile h3 {
+		font-size: 18px;
+	}
+
+	.chef-profile p {
+		font-size: 14px;
+	}
 }

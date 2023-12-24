@@ -9,31 +9,45 @@ body {
 	color: rgb(76, 75, 75);
 }
 
-.site-header {
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 	background-color: white;
 	color: #2a2a2a;
-	padding: 10px;
+	padding: 30px 60px;
+	position: sticky;
+	top: 0;
+    right:0;
+    left:0;
+    box-shadow: 1px 2px 15px rgba(198, 198, 198, 0.191);
 }
-
 
 .main-nav ul {
 	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 24px;
+	color: #2a2a2a;
 }
 
-.main-nav ul li {
-	display: inline;
-	margin-right: 20px;
-}
-
-.main-nav a {
-	text-decoration: none;
-	font-weight: bold;
-	font-size: 18px;
-}
-
-.header .logo h4{
+.header .logo{
     font-family: cursive;
+    color: coral;
+	font-weight: 600;
 }
+
+.main-nav ul li a {
+	text-decoration: none;
+	color: #2a2a2a;
+}
+.main-nav ul li a.active {
+	color: coral;
+	font-weight: 600;
+}
+
 .recipe-categories-section {
 	text-align: center;
 	padding: 50px;
