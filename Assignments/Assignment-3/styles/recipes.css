@@ -3,10 +3,16 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
 	line-height: 1.6;
 	color: rgb(76, 75, 75);
 }
+
+a {
+	text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -15,9 +21,11 @@ h5,
 h6 {
 	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+
 p {
 	font-family: Georgia, "Times New Roman", Times, serif;
 }
+
 .header {
 	display: flex;
 	flex-direction: row;
@@ -33,7 +41,7 @@ p {
 	box-shadow: 1px 2px 15px rgba(198, 198, 198, 0.191);
 }
 
-.main-nav ul {
+.nav ul {
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
@@ -48,51 +56,97 @@ p {
 	font-weight: 600;
 }
 
-.main-nav ul li a {
+.nav ul li a {
 	text-decoration: none;
 	color: #2a2a2a;
 }
-.main-nav ul li a.active {
+
+.nav ul li a.active {
 	color: coral;
 	font-weight: 600;
 }
 
-.recipe-categories-section {
-	text-align: center;
-	padding: 50px;
-	background-color: #f8f8f8;
-}
-
 .section-title {
-	color: rgb(230, 29, 96);
+	color: coral;
 	font-size: 30px;
 }
 
 .recipe-list-section {
 	text-align: center;
-	padding: 50px 0;
-	background-color: #f8f8f8;
+	padding: 30px 60px;
 }
-
+.recipe-section {
+	padding: 30px 60px;
+}
+.recipes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 40px;
+	padding: 30px 0;
+}
 .recipe-list-section .section-title {
 	margin-bottom: 30px;
 }
+.recipes-img {
+    height:300px;
+}
+.recipes-img img {
+    height:100%;
+    object-fit: cover;
+}
+.recipe {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+}
 
-.site-footer {
+.recipe img {
+	width: 100%;
+	max-width: 400px;
+	border-radius: 8px;
+}
+
+.recipe h3 {
+	margin-top: 20px;
+	font-size: 24px;
+	color: coral;
+}
+
+.recipe p {
+	color: #2a2a2a;
+}
+
+.button {
+	background-color: coral;
+	border: none;
+	border-radius: 10px;
+	font-weight: 600;
+	padding: 16px;
+	cursor: pointer;
+}
+.button a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer {
 	text-align: center;
 	padding: 20px 0;
-	background-color: rgb(230, 29, 96);
+	background-color: coral;
 	color: white;
 }
 
 /* Responsive Styling */
 @media only screen and (max-width: 768px) {
-	.main-nav ul li {
+	.nav ul li {
 		display: block;
 		margin-bottom: 10px;
 	}
 
-	.main-nav a {
+	.nav a {
 		font-size: 16px;
 	}
 
@@ -107,15 +161,15 @@ p {
 }
 
 @media only screen and (max-width: 480px) {
-	.main-nav {
+	.nav {
 		text-align: center;
 	}
 
-	.main-nav ul {
+	.nav ul {
 		padding-top: 10px;
 	}
 
-	.main-nav ul li {
+	.nav ul li {
 		display: block;
 		margin-bottom: 10px;
 	}

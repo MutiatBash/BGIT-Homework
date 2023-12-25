@@ -226,7 +226,10 @@ p {
 		font-size: 14px;
 	}
 
-	.site-footer {
+	.footer {
 		padding: 10px 0;
+	}
+    .footer p {
+		font-size: 14px;
 	}
 }
