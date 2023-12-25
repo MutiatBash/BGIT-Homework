@@ -4,11 +4,20 @@
 	box-sizing: border-box;
 }
 body {
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	line-height: 1.6;
 	color: rgb(76, 75, 75);
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
 .header {
 	display: flex;
 	flex-direction: row;
@@ -19,9 +28,9 @@ body {
 	padding: 30px 60px;
 	position: sticky;
 	top: 0;
-    right:0;
-    left:0;
-    box-shadow: 1px 2px 15px rgba(198, 198, 198, 0.191);
+	right: 0;
+	left: 0;
+	box-shadow: 1px 2px 15px rgba(198, 198, 198, 0.191);
 }
 
 .main-nav ul {
@@ -33,9 +42,9 @@ body {
 	color: #2a2a2a;
 }
 
-.header .logo{
-    font-family: cursive;
-    color: coral;
+.header .logo {
+	font-family: cursive;
+	color: coral;
 	font-weight: 600;
 }
 
