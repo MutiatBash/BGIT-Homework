@@ -5,9 +5,21 @@
 }
 
 body {
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	line-height: 1.6;
 	color: rgb(76, 75, 75);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+p {
+	/* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 .about-sect {
 	display: flex;
@@ -55,18 +67,44 @@ body {
 }
 
 .about-us-section {
-	text-align: center;
-	padding: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 40px;
+	padding: 60px;
 }
-
+.about-img,
+.about-text {
+	width: 45%;
+}
+.about-img img {
+	width: 100%;
+	border: none;
+	border-radius: 16px;
+}
 .section-title {
 	color: coral;
-	font-size: 30px;
+	font-size: 40px;
 }
 
 .about-us-section p {
-	margin-top: 20px;
 	font-size: 18px;
+}
+.btn-nav {
+	padding: 30px 60px;
+}
+.button {
+	background-color: coral;
+	border: none;
+	border-radius: 10px;
+	font-weight: 600;
+	padding: 16px;
+	cursor: pointer;
+}
+.button a {
+	text-decoration: none;
+	color: white;
 }
 
 /* CHEF STYLING */
@@ -85,14 +123,25 @@ body {
 .chef-sect {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	gap: 40px;
 	padding: 30px;
 }
+.chef-profile,
+.about-text {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
 .chef-profile p {
 	color: rgb(76, 75, 75);
-	line-height: 1.6;
+	font-size: 14px;
 }
-
+.profile-text {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
 .chef-profile p.role {
 	font-family: fantasy;
 	font-weight: 800;
@@ -104,81 +153,87 @@ body {
 }
 .chef-profile img {
 	border-radius: 50%;
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	object-fit: cover;
 }
 
-.chef-profile h3 {
-	color: coral;
-	font-size: 24px;
-}
-
-.site-footer {
+.footer {
 	text-align: center;
 	padding: 20px 0;
 	background-color: coral;
 	color: white;
 }
 
-/* Responsive Styling */
+/* TABLET RESPONSIVENESS */
 @media only screen and (max-width: 768px) {
-	.main-nav ul li {
-		display: block;
-		margin-bottom: 10px;
+	.header {
+		padding: 30px;
 	}
-
-	.main-nav a {
-		font-size: 16px;
-	}
-
 	.about-us-section {
 		padding: 30px;
+		gap: 20px;
+	}
+	.nav a {
+		font-size: 14px;
 	}
 
 	.section-title {
-		font-size: 28px;
+		font-size: 32px;
 	}
 
 	.about-us-section p {
-		font-size: 16px;
+		font-size: 14px;
+	}
+	.chef-sect {
+		gap: 20px;
+		padding: 30px 0;
 	}
 	.chef-profile img {
 		width: 120px;
 		height: 120px;
 	}
-
-	.chef-profile h3 {
-		font-size: 20px;
-	}
-
 	.chef-profile p {
-		font-size: 16px;
+		font-size: 12px;
+	}
+	.btn-nav {
+		padding: 30px;
 	}
 }
 
+/*  MOBILE RESPONSIVENESS */
 @media only screen and (max-width: 480px) {
-	.main-nav {
-		text-align: center;
+	.header {
+		flex-direction: column;
+		gap: 5px;
+		padding: 18px;
 	}
-
-	.main-nav ul {
-		padding-top: 10px;
+	.header .logo {
+		font-size: 16px;
 	}
-
-	.main-nav ul li {
-		display: block;
-		margin-bottom: 10px;
+	.main-nav ul li a {
+		font-size: 14px;
 	}
-
 	.about-us-section {
-		padding: 20px;
+		padding: 18px;
+		flex-direction: column;
 	}
-
+	.our-chefs-section {
+		padding: 18px;
+	}
+	.about-text,
+	.about-img {
+		width: 100%;
+	}
+	.about-img img {
+		border-radius: 12px;
+	}
 	.section-title {
-		font-size: 24px;
+		font-size: 28px;
 	}
-
+	.chef-sect {
+		flex-direction: column;
+	}
 	.about-us-section p {
 		font-size: 14px;
 	}
@@ -187,11 +242,13 @@ body {
 		height: 100px;
 	}
 
-	.chef-profile h3 {
-		font-size: 18px;
-	}
-
 	.chef-profile p {
 		font-size: 14px;
 	}
+	.footer p {
+		font-size: 14px;
+	}
+    .btn-nav{
+    padding: 30px 18px;
+}
 }
