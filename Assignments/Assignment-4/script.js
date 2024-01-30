@@ -29,6 +29,10 @@ class TaskManager {
 
 const taskManager1 = new TaskManager();
 const task1 = taskManager1.addTask("Submit Assignments");
-const complete1 = taskManager1.completeTask(0);
+const task2 = taskManager1.addTask("Eat Breakfast");
+
 console.log(task1);
-console.log(complete1);
+console.log("Tasks:", taskManager1.tasks);
+const completedTask = taskManager1.completeTask(task1.id)
+console.log(completedTask)
+console.log("Updated :", taskManager1.tasks)
