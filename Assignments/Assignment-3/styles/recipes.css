@@ -1,0 +1,185 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	line-height: 1.6;
+	color: rgb(76, 75, 75);
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	color: #2a2a2a;
+	padding: 30px 60px;
+	position: sticky;
+	top: 0;
+	right: 0;
+	left: 0;
+	box-shadow: 1px 2px 15px rgba(198, 198, 198, 0.191);
+}
+
+.nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 24px;
+	color: #2a2a2a;
+}
+
+.header .logo {
+	font-family: cursive;
+	color: coral;
+	font-weight: 600;
+}
+
+.nav ul li a {
+	text-decoration: none;
+	color: #2a2a2a;
+}
+
+.nav ul li a.active {
+	color: coral;
+	font-weight: 600;
+}
+
+.section-title {
+	color: coral;
+	font-size: 30px;
+}
+
+.recipe-list-section {
+	text-align: center;
+	padding: 30px 60px;
+}
+.recipe-section {
+	padding: 30px 60px;
+}
+.recipes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 40px;
+	padding: 30px 0;
+}
+.recipe-list-section .section-title {
+	margin-bottom: 30px;
+}
+.recipes-img {
+    height:300px;
+}
+.recipes-img img {
+    height:100%;
+    object-fit: cover;
+}
+.recipe {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+}
+
+.recipe img {
+	width: 100%;
+	max-width: 400px;
+	border-radius: 8px;
+}
+
+.recipe h3 {
+	margin-top: 20px;
+	font-size: 24px;
+	color: coral;
+}
+
+.recipe p {
+	color: #2a2a2a;
+}
+
+.button {
+	background-color: coral;
+	border: none;
+	border-radius: 10px;
+	font-weight: 600;
+	padding: 16px;
+	cursor: pointer;
+}
+.button a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer {
+	text-align: center;
+	padding: 20px 0;
+	background-color: coral;
+	color: white;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 768px) {
+	.nav ul li {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.nav a {
+		font-size: 16px;
+	}
+
+	.recipe-categories-section,
+	.recipe-list-section {
+		padding: 30px;
+	}
+
+	.section-title {
+		font-size: 28px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.nav {
+		text-align: center;
+	}
+
+	.nav ul {
+		padding-top: 10px;
+	}
+
+	.nav ul li {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.recipe-categories-section,
+	.recipe-list-section {
+		padding: 20px;
+	}
+
+	.section-title {
+		font-size: 24px;
+	}
+}
