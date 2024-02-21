@@ -47,8 +47,6 @@
 			];
 
 
-
-
 			// Function to find the empty cells
 			function findEmptyCell(board) {
 				for (let row = 0; row < 9; row++) {
@@ -90,7 +88,7 @@
 			function solve(board) {
 				const empty = findEmptyCell(board);
 				if (!empty) {
-					return true; // Puzzle solved
+					return true; 
 				}
 
 				const [row, col] = empty;
@@ -129,7 +127,7 @@
 			}
 
 
-            
+
 			// Function to display the array of board
 			function displayBoard(board) {
 				const table = document.getElementById("sudoku-board");
