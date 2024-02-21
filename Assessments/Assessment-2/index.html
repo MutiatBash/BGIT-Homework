@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sudoku Solver</title>
+		<style>
+			table {
+				border-collapse: collapse;
+				margin: 30px;
+			}
+			td {
+				width: 35px;
+				height: 35px;
+				text-align: center;
+				border: 1px solid #000;
+			}
+			button {
+				background-color: blueviolet;
+				color: #fff;
+				padding: 1rem;
+				border-radius: 8px;
+				margin: 0 2rem;
+			}
+			button:disabled {
+				background-color: rgba(152, 150, 150, 0.913);
+				color: rgb(93, 93, 93);
+			}
+		</style>
+	</head>
+	<body>
+		<table id="sudoku-board"></table>
+		<button onclick="solveSudoku()">Solve Sudoku</button>
+
+		<script>
+			// The 2D board array
+			const board = [
+				[1, 0, 0, 0, 0, 7, 0, 9, 0],
+				[0, 3, 0, 0, 2, 0, 0, 0, 8],
+				[0, 0, 9, 6, 0, 0, 5, 0, 0],
+				[0, 0, 5, 3, 0, 0, 9, 0, 0],
+				[0, 1, 0, 0, 8, 0, 0, 0, 2],
+				[6, 0, 0, 0, 0, 4, 0, 0, 0],
+				[3, 0, 0, 0, 0, 0, 0, 1, 0],
+				[0, 4, 0, 0, 0, 0, 0, 0, 7],
+				[0, 0, 7, 0, 0, 0, 3, 0, 0],
+			];
+
+
+			// Function to find the empty cells
+			function findEmptyCell(board) {
+				for (let row = 0; row < 9; row++) {
+					const col = board[row].indexOf(0);
+					if (col !== -1) {
+						return [row, col];
+					}
+				}
+				return null;
+			}
+
+
+
+			// fuction to assign numbers randomly to unfilled cells while ensuring the same col and rows are not filled with the same number
+			function randomize(board, row, col, num) {
+				for (let i = 0; i < 9; i++) {
+					if (board[row][i] === num || board[i][col] === num) {
+						return false;
+					}
+				}
+
+				const startRow = Math.floor(row / 3) * 3;
+				const startCol = Math.floor(col / 3) * 3;
+
+				for (let i = 0; i < 3; i++) {
+					for (let j = 0; j < 3; j++) {
+						if (board[startRow + i][startCol + j] === num) {
+							return false;
+						}
+					}
+				}
+
+				return true;
+			}
+
+
+
+			//  Handles the solving of the sudoku
+			function solve(board) {
+				const empty = findEmptyCell(board);
+				if (!empty) {
+					return true; 
+				}
+
+				const [row, col] = empty;
+				for (let num = 1; num <= 9; num++) {
+					if (randomize(board, row, col, num)) {
+						board[row][col] = num;
+						console.log(`Filled row ${row}, col ${col} with ${num}`);
+
+						if (solve(board)) {
+							return true;
+						}
+
+						consoleF.log(`Backtracking at row ${row}, col ${col}`);
+					}
+				}
+				board[row][col] = 0;
+				return false;
+			}
+
+
+
+			// Calls the solve function and updates the uI
+			function solveSudoku() {
+				const button = document.querySelector("button");
+				button.textContent = "Solving...";
+				button.disabled = true;
+
+				setTimeout(() => {
+					solve(board);
+					displayBoard(board);
+					console.table(board);
+					console.log("Solved");
+					button.textContent = "Solved";
+					button.disabled = false;
+				}, 100);
+			}
+
+
+
+			// Function to display the array of board
+			function displayBoard(board) {
+				const table = document.getElementById("sudoku-board");
+				table.innerHTML = "";
+
+				for (let i = 0; i < 9; i++) {
+					const row = document.createElement("tr");
+					for (let j = 0; j < 9; j++) {
+						const cell = document.createElement("td");
+						cell.textContent = board[i][j] || "";
+						row.appendChild(cell);
+					}
+					table.appendChild(row);
+				}
+			}
+
+			displayBoard(board);
+		</script>
+	</body>
+</html>

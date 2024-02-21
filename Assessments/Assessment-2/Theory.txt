@@ -1,0 +1,58 @@
+1- Closures occur when a function is holding another function and that inner function can also access the main function's variables.
+for example
+function mainFunc() {
+    let myName = "Stella";
+    
+    function smallFunc() {
+        console.log(myName);
+    }
+    
+    return smallFunc;
+}
+
+const newFunct = mainFunc()
+console.log(newFunct())
+When this function is called, the function can access the variable myName and it is logged to the console.
+Closures are important has they help in creating higher order functions and in managing data.
+
+2- Differences between var, let, and const
+var: This is a function scoped variable that can be redeclared and reassigned within the function it was declared. It is one of the old ways of declaring varibales and is rarely used currently.
+let:  Let is ususally declared witihin a block scope. It can be reassigned but it can't be redeclared within the same scope. 
+e.g if we say Let x = 2, we can't say let x = 3 again, we will get an error. Instead we can reassign x by saying x = 3. Let can be declared without assigning a alue.
+const: This is a constant variable cannot be reassigned after declaration. if we say const y = 10, we can't reassign another value again, although there are others ways it can be updated. Const must also be assigned a value when declared.
+- let is usually used when we want to reassign a value within the same scope
+- const is used when we want to ensure a value stays constant
+
+3 - Higher Order Functions are functions that take in functions as arguments and can also return functions. 
+e.g 
+``` function update(add) {
+				return add(1, 3);
+			}
+
+			function add(x, y) {
+				return x + y;
+			}
+
+			console.log(update(add));```
+
+            There are two functions here, the add() and update(). The update function is a higher order function that takes in the add function amd returns the output
+       map is also an example of an higher order function that takes in a callback function and returns the output
+
+4- State : This has to do with the internal state of a component which changes overtime.
+   Props: These are called propertiies that a component recieves. They are ususally passed down from parent component to its children.
+
+  - State is mutable and can change from time to time, whereas props are immutable and cannot be odified by the compinenets that receive then
+  - They are both used to create and maintain reusable components
+
+5- React component lifecycle refers to the stages components go through from when it is created to getting updated
+and even removed from the DOM. These stages are triggered by different events that occur within a component.
+ Some of the common methods include
+ 
+ - componentDidMount: This method is called after a component has been successfully inserted into the DOM.
+  This is when the component is initially being rendered or created.
+
+ - componentDidUpdate: This is called after changes have been made to a component and it needs to be been updated.
+  A virtual representation of the DOM is created to view the change that occurred so only the altered componenet is updated and re-rendered
+
+ - componentWillUnmount: This is called just before a component is removed from the DOM. 
+ It helps to prepare the DOM to take out a component and prevent unwarranted mixup.
