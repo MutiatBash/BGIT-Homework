@@ -1,0 +1,63 @@
+HTML BASICS
+
+1 The purpose of the <DOCTYPE> tag is to inform the browser that the document is an HTML and also what version of HTML to use, 
+as there are currently 5 versions of HTML. This helps to prevent
+
+2 The <div> tag is a block element that takes up the entire width of the screen when declared.
+while the <span> tag is an inline element that only takes up as much width as it needs.
+- The div tag can also hold other block elemnts and inline elements
+
+3 Semantic HTML is part of the features of the current HTML5. They refer to HTML elements that are used to define sections of a webpage. 
+It is important because it helps with accessibility and readability. It also helps the browser to correctly identify the parts of the webpage being displayed.
+e.g header, footer,section
+
+CSS FUNDAMENTALS
+
+1 - Margin refers to the space around an element. It is the distance between the padding and the edge of the screen
+- Padding on the other hand is the space surrounding the content of an element. 
+- Margin is used to give spacing outside an element
+- Paddding is used to give spacing inside the element
+
+2 Box Model in CSS is a concept used to represent an element on the webpage. Elements are viewed as being in a box where each element consists of a:
+- Content
+- Padding
+- Border
+- Margin
+
+3 CSS specificity hierarchy is used to is used to determine which styling of an element has more importance. 
+What this means is that when styling an element, some selectors or styling method
+have more priority than others and this is the styling that will eventually take effect on the element.
+
+RESPONSIVE DESIGN
+
+1 Media Query is used to specify what effect should take place on the webpage which is determined by declaring certain rules.
+It is used in responsive design to specify how elements should behave or be positioned at different screen sizes on the webpage.
+
+2 Responsive Design refers to making the contents of the webpage adjust according to the width of the screen. It helps with accessiblity and ensures that websites look visually appealing regardless of whether 
+it is viewed on mobile or desktop. In responsive design, specific rules are applied to make they adjustable. 
+
+- In adaptive Design, the contents have been designed already based on the screen sizes and each screens might have different layouts. This is more time comsuming compared to responsive design
+
+3 Viewport refers to the area that is visible to the user on the browser. It also relates to the screen size of the device.
+
+HTML5 AND CSS features
+
+1 The new HTML5 features
+- Semantic HTML
+- Audio tag
+- Video tag
+
+-Semantic HTML : They refer to HTML elements that are used to define sections of a webpage. 
+It is important because it helps with accessibility and readabilit. It also helps the browser to correctly identify the parts of the webpage being displayed.
+e.g header, footer,section
+
+- Audio tag : This feature allows one to add audios on our websites
+- Video tag : This feature allows one to add videos as contents on our websites
+
+2 CSS Variables are used to define specific CSS properties that can be reused across the webpage. Instead of having to declare the properties repeatedly,
+ the properties are defined in the root and can be used anywhere for styling. They can be accessed by declareing the keyword var() and then specifying the name of the variable 
+ inside the brackets.
+
+3 Flexbox or Grid enables us to properly style the contents of our website. 
+It allows us to easily have control over the look of the site as we are able to style the contents to look properly and visually appealing.
+They both make responsive styling easy as we can interchange properties and change the flow of the content, either horizontally or vertically based on the screen sizes.
